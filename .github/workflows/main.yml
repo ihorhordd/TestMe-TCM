@@ -47,10 +47,8 @@ jobs:
     steps: 
       - name: Checkout repository
         uses: actions/checkout@v3
-      - name: Go to tests directory
-        run: cd tests/
       - name: Upload Monocart Report
         uses: actions/upload-artifact@v3
         with:
-            name: my-artifact
-            path: test-results/
+          name: Test Report
+          path: tests/test-results
