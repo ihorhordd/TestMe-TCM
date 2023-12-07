@@ -48,7 +48,7 @@ jobs:
       - name: getDir
         run: echo ${{ github.workspace }}
       - name: getSir
-        run:  ls -d */
+        run:  echo ./*/
       - name: Upload Monocart Report
         uses: actions/upload-artifact@v3
         with:
