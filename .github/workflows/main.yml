@@ -48,7 +48,7 @@ jobs:
       - name: getDir
         run: echo ${{ github.workspace }}
       - name: getSir
-        run:  ls ${{ github.workspace }}
+        run:  ls -R
       - name: Upload Monocart Report
         uses: actions/upload-artifact@v3
         with:
@@ -56,4 +56,4 @@ jobs:
             run: cd ..
             path: 'tests/test-results'
       - name: getBsss
-        run:  ls ${{ github.workspace }}
+        run:  ls -R
