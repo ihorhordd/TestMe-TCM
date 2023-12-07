@@ -44,12 +44,10 @@ jobs:
   publish_results:
     needs: run-app
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./tests
     steps:
       - name: Upload Monocart Report
         uses: actions/upload-artifact@v3
         with:
+            working-directory: tests/
             name: Test Report
             path: 'test-results/'
