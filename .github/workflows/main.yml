@@ -49,6 +49,8 @@ jobs:
         run: echo ${{ github.workspace }}
       - name: getSir
         run:  ls ${{ github.workspace }}
+      - name: logiut
+        run:  cd ..
       - name: Upload Monocart Report
         uses: actions/upload-artifact@v3
         with:
