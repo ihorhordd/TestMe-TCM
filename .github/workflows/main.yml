@@ -45,10 +45,10 @@ jobs:
     needs: run-app
     runs-on: ubuntu-latest
     steps:
+      - name: getDir
+        run: echo ${{ github.workspace }}
       - name: Upload Monocart Report
         uses: actions/upload-artifact@v3
         with:
-            working-directory: tests/
-            run: echo ${{ github.workspace }}
             name: Test Report
-            path: 'test-results/'
+            path: 'tests/test-results/'
