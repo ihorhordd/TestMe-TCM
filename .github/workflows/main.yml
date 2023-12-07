@@ -49,12 +49,11 @@ jobs:
         run: echo ${{ github.workspace }}
       - name: getSir
         run:  ls ${{ github.workspace }}
-      - name: logiut
-        run:  cd ..
       - name: Upload Monocart Report
         uses: actions/upload-artifact@v3
         with:
             name: Test Report
+            run: cd ..
             path: 'tests/test-results'
       - name: getBsss
         run:  ls ${{ github.workspace }}
