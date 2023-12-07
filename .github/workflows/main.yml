@@ -41,11 +41,14 @@ jobs:
         working-directory: tests/
         run: npm test
 
-      - name: go to tests
+  publish_results:
+    needs: run-app
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Go to tests directory
         run: cd tests/
-        
       - name: Upload Monocart Report
         uses: actions/upload-artifact@v3
         with:
-            name: Test Report
-            path: 'tests/test-results'
+            name: my-artifact
+            path: test-results/
