@@ -29,12 +29,6 @@ jobs:
       - name: Run application
         run: python -m manage runserver &
 
-  run-tests:
-    runs-on: ubuntu-latest
-
-    needs: run-app
-
-    steps:
       - name: Checkout repository
         uses: actions/checkout@v3
 
