@@ -45,6 +45,8 @@ jobs:
     needs: run-app
     runs-on: ubuntu-latest
     steps: 
+      - name: Checkout repository
+        uses: actions/checkout@v3
       - name: Go to tests directory
         run: cd tests/
       - name: Upload Monocart Report
