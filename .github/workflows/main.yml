@@ -27,7 +27,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run application
-        run: python -m manage runserver
+        run: python -m manage runserver --no-browser --background
 
   run-tests:
     runs-on: ubuntu-latest
