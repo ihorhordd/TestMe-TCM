@@ -24,7 +24,7 @@ export default defineConfig({
     use: {
         baseURL: 'http://127.0.0.1:8000',
         trace: 'on',
-        headless: false
+        headless: true
     },
 
     /* Configure projects for major browsers */
