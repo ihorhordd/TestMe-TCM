@@ -41,19 +41,11 @@ jobs:
         working-directory: tests/
         run: npm test
 
-  publish_results:
-    needs: run-app
-    runs-on: ubuntu-latest
-    steps:
-      - name: getDir
-        run: echo ${{ github.workspace }}
-      - name: getSir
-        run:  ls -R $GITHUB_WORKSPACE
+      - name: go to tests
+        run: cd tests/
+        
       - name: Upload Monocart Report
         uses: actions/upload-artifact@v3
         with:
             name: Test Report
             path: 'tests/test-results'
-            working-directory: tests/
-      - name: getBsss
-        run:  ls -R
