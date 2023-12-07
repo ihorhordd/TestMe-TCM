@@ -45,6 +45,7 @@ jobs:
         run: SIGINT/Ctrl-C
 
   publish_results:
+    needs: run-app
     runs-on: ubuntu-latest
     steps:
     - name: Upload Monocart Report
