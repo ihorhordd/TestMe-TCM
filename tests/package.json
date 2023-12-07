@@ -1,0 +1,26 @@
+{
+  "name": "playwrighttestrepo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test ",
+    "testTC": "npx playwright test tests/testCaseDashboard.test.ts ",
+    "testDebug": "npx playwright test --debug",
+    "testUi": "npx playwright test --ui",
+    "showReport": "npx monocart show-report test-results/monoreport.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.38.1",
+    "@types/node": "^20.8.2",
+    "monocart-reporter": "^1.7.13"
+  }
+}

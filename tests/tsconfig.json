@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "baseUrl": ".",
+    "resolveJsonModule": true,
+    "forceConsistentCasingInFileNames": true,
+    "paths": {
+      "@helpers": ["src/utils/index.ts"],
+      "@base/*": ["src/base/*"],
+      "@fixture": ["src/utils/fixture.ts"],
+      "@pages": ["src/pageObjects/index.ts"],
+      "@fragments": ["src/fragments/index.ts"],
+      "@components": ["src/components/index.ts"],
+      "@types": ["./types/index.ts"],
+      "@testData": ["./test_data/index.ts"]
+    }
+  },
+  "exclude": ["node_modules"]
+}

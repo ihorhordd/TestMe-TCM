@@ -5,7 +5,7 @@
         <div class="container">
             <div class="wBox">
 
-                <p class="noRun">No Run: <span>{{ norun }}</span></p>
+                <p class="norun">No Run: <span>{{ norun }}</span></p>
                 <p class="passed">Passed: <span>{{ passed }}</span></p>
                 <p class="failed">Failed: <span>{{ failed }}</span></p>
                 <p class="total">Total: <span>{{ total }}</span></p>
@@ -19,7 +19,7 @@
         function refreshStats() {
             LightAjax.get("{% url 'refresh' %}", function (status, response) {
                 if (status == 200) {
-                    $('.noRun span').text(response.norun);
+                    $('.norun span').text(response.norun);
                     $('.passed span').text(response.passed);
                     $('.failed span').text(response.failed);
                     $('.total span').text(response.total);
