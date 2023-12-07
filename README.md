@@ -1,47 +1,4 @@
-# TestMe app
-QA Mania  
-https://qamania.org/
-
-## About
-The main goal of this application - learn how to cover web apps with autotests.
-It is designed to be cross platform and does not require many dependencies.  
-_Application code is not optimal due to design restrictions but expected to be good enough for autotests_  
-
-## Application Description
-TestMe - simple test management system. It provides features to create, update, delete, run and view list of test cases.
-Also it is possible to view list of all test runs and get stats of all test cases in the system.
-Demo features designed additionally to give automation test engineers possibility to handle 
-long waitings and multiple ajax requests
-
-### Features
-- Registration
-- Login
-- View Test Stats
-- List test cases
-- Create test case
-- Update test case
-- Delete test case
-- Run test case (make it pass or fail)
-- Download test cases to csv file
-- Upload test cases as csv file  
-- List test runs
-- Open page after specific BE delay
-- Open page and wait specific number of ajax requests handled
-- Handle HTTP 500 errors
-- <span style="color:red">NEW!</span> Rest API for API and performance testing
-- <span style="color:red">NEW!</span> iFrame in demo pages
-- <span style="color:red">NEW!</span> input with variable id and classes
-
-## API
-[Api doc in postman](https://documenter.getpostman.com/view/2037649/UV5TEe6x)
-
-## Application has:  
-- Web UI
-- Mobile version of web UI
-- coordinates in UI header for location tests   
-- REST services
-- SQLite DB to work with DB without installing 3rd party services
-- Page with different input types to play with
+## Fork of TestMe-TMC with playwright typescript tests
 
 ## Preconditions
 - Python 3.10+
@@ -55,6 +12,12 @@ long waitings and multiple ajax requests
 
 Server will be started at http://127.0.0.1:8000  
 
+## To run tests 
+1. Open CLI
+2. Navigate to project folder
+3. Execute cd tests/
+4. npm test
+   
 ## Default users
 - alice
 - bob
