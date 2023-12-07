@@ -9,19 +9,14 @@ on:
 jobs:
   run-app:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        python-version: [ 3.x ]
-
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v3
         with:
-          python-version: ${{ matrix.python-version }}
+          python-version: 3.x
 
       - name: Install Python dependencies
         run: pip install -r requirements.txt
@@ -29,13 +24,10 @@ jobs:
       - name: Run application
         run: python -m manage runserver &
 
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-            node-version: 20.x
+          node-version: 20.x
 
       - name: Setup dependencies
         working-directory: tests/
@@ -48,3 +40,14 @@ jobs:
       - name: Run tests
         working-directory: tests/
         run: npm test
+
+      - name: Stop Server
+        run: SIGINT/Ctrl-C
+
+  publish_results:
+    runs-on: ubuntu-latest
+       - name: Upload Monocart Report
+       uses: actions/upload-artifact@v3
+       with:
+           name: monoreport.html
+           path: test-results/monoreport.html
