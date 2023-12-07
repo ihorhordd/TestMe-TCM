@@ -49,5 +49,5 @@ jobs:
         working-directory: tests/
         uses: actions/upload-artifact@v3
         with:
-          name: monoreport.html
-          path: test-results/monoreport.html
+            name: Test Report
+            path: 'test-results/'
