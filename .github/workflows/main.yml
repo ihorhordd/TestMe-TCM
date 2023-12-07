@@ -41,9 +41,6 @@ jobs:
         working-directory: tests/
         run: npm test
 
-      - name: Stop Server
-        run: SIGINT/Ctrl-C
-
   publish_results:
     needs: run-app
     runs-on: ubuntu-latest
