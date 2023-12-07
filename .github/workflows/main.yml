@@ -38,7 +38,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Go to tests directory
+      - name: Setup dependencies
         working-directory: tests/
         run: npm ci
 
