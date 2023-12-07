@@ -39,7 +39,8 @@ jobs:
       - name: Go to tests directory
         working-directory: tests/
         run: npm ci
-
+      - name: Install playwright browsers
+        run: npx playwright install
       - name: Run tests
         working-directory: tests/
         run: npm test
