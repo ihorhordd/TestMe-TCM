@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  run-app:
+  run-tests:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -41,14 +41,11 @@ jobs:
         working-directory: tests/
         run: npm test
 
-  publish_results:
-    needs: run-app
-    runs-on: ubuntu-latest
-    steps: 
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - name: go to tests
+        run: cd tests/
+        
       - name: Upload Monocart Report
         uses: actions/upload-artifact@v3
         with:
-          name: Test Report
-          path: tests/test-results
+            name: Test Report
+            path: 'tests/test-results'
