@@ -1,8 +1,6 @@
 name: CI Main
 
 on:
-  push:
-    branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
 
@@ -41,11 +39,11 @@ jobs:
         working-directory: tests/
         run: npm test
 
-      - name: go to tests
-        run: cd tests/
-        
+  publish-result:
+    runs-on: ubuntu-latest
+    steps:
       - name: Upload Monocart Report
         uses: actions/upload-artifact@v3
         with:
-            name: Test Report
-            path: 'tests/test-results'
+          name: Test Report
+          path: tests/test-results
